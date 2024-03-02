@@ -95,4 +95,9 @@ button#save {
 #save {
     display: none !important;
 }
-
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Torna a imagem completamente redonda */
+}
