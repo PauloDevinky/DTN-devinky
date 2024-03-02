@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dark Theme Notepad</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Espaço reservado para o anúncio à esquerda -->
+        <aside class="left-ad">
+            <!-- Coloque o código do anúncio do Google AdSense aqui -->
+        </aside>
+
+        <header>
+            <div class="profile-picture" onclick="selectProfilePicture()">
+                <img id="profile-image" src="assets/img/iconedeperfil.png" alt="Profile Picture">
+                <input type="file" id="file-input" accept="image/*" style="display:none;" onchange="changeProfilePicture(event)">
+            </div>
+            <div class="input-container">
+                <input type="text" id="note-title" placeholder="Título da Nota" style="background-color: #000000;">
+                <input type="text" id="author-name" placeholder="Nome do Autor" style="background-color: #000000;">
+            </div>
+            <button id="save" onclick="publishNote()">Publicar</button>
+        </header>
+
+        <div class="content">
+            <textarea id="note-content" placeholder="Digite sua nota aqui..." style="background-color: #000000;"></textarea>
+        </div>
+
+        <!-- Espaço reservado para o anúncio à direita -->
+        <aside class="right-ad">
+            <!-- Coloque o código do anúncio do Google AdSense aqui -->
+        </aside>
+        
+        <footer>
+            <div id="share-link"></div>
+            <footer>
+                <p>@paulodevinky</p>
+            </footer>
+        </footer>
+    </div>
+    <!-- Espaço reservado para o anúncio na parte inferior (para dispositivos móveis) -->
+    <section id="bottom-ad">
+        <!-- Coloque o código do anúncio do Google AdSense aqui -->
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Verifica se o parâmetro 'id' está presente na URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const noteId = urlParams.get('id');
+
+        // Se 'id' estiver presente, oculta o botão de publicar
+        if (noteId) {
+            document.getElementById('save').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

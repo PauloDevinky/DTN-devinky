@@ -1,0 +1,91 @@
+body {
+    background-color: #000000; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte legível */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 50px auto; /* Centralização horizontal com margem superior e inferior */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 800px; /* Limitando a largura do container */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 10px; /* Adiciona espaço à direita da foto de perfil */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-container {
+    flex-grow: 1;
+    margin-left: 20px; /* Espaçamento entre a foto de perfil e os campos de entrada */
+}
+
+textarea,
+input[type="text"] {
+    width: calc(100% - 20px); /* Considerando 10px de padding em cada lado */
+    padding: 10px;
+    border: none;
+    background-color: #000000; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    resize: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: right;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7B0323; /* Cor do botão de salvar */
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px; /* Adiciona espaço acima do botão */
+}
+
+button:hover {
+    background-color: #5b021a; /* Cor do botão ao passar o mouse */
+}
+
+textarea:focus,
+input[type="text"]:focus {
+    outline: none; /* Remove a borda de foco */
+}
+
+footer {
+    text-align: center;
+}
+
+/* Estilos para telas menores, como dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    .input-container {
+        display: flex; /* Permite que os elementos sejam alinhados em uma linha */
+        flex-direction: column; /* Alinha os elementos verticalmente */
+    }
+
+    .input-container button {
+        margin-top: 10px; /* Adiciona espaço acima do botão */
+    }
+}
