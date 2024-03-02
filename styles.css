@@ -93,5 +93,6 @@ button#save {
     border-radius: 30px;
 }
 #save {
-    display: none;
+    display: none !important;
 }
+
