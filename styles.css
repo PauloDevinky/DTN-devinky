@@ -89,3 +89,6 @@ footer {
         margin-top: 10px; /* Adiciona espaço acima do botão */
     }
 }
+button#save {
+    border-radius: 30px;
+}
