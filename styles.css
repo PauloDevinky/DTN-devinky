@@ -101,3 +101,7 @@ button#save {
     object-fit: cover;
     border-radius: 50%; /* Torna a imagem completamente redonda */
 }
+footer a {
+    color: #ffffff; /* Define a cor do link como branco */
+    text-decoration: none; /* Remove o sublinhado */
+}
