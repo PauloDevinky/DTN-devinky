@@ -54,17 +54,6 @@
 
     <script src="script.js"></script>
 
-    <script>
-        // Verifica se o parâmetro 'id' está presente na URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const noteId = urlParams.get('id');
-
-        // Se 'id' estiver presente, oculta o botão de publicar
-        if (noteId) {
-            document.getElementById('save').style.display = 'none';
-        }
-    </script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://blocodenotas.online/google-analytics.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
